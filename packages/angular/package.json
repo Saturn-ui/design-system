@@ -1,0 +1,29 @@
+{
+  "name": "@saturn/angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@saturn/eslint-config": "*",
+    "@saturn/tokens": "*",
+    "@saturn/ts-config": "*",
+    "@angular-eslint/eslint-plugin": "^17.2.1",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@angular-eslint/eslint-plugin-template": "^17.2.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    
+  }
+}

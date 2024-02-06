@@ -1,0 +1,4 @@
+{
+    "extends": "@saturn/ts-config/angular.json",
+    "include": ["src"],
+  }
