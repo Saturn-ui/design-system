@@ -16,11 +16,11 @@ module.exports = {
     },
     rules: {
         // Indentação de 2 espaços
-        'indent': ['error', 2],
+        'indent': ['error', 4],
         // Espaço antes de chaves em objetos e funções
         'space-before-blocks': ['error', 'always'],
         // Ponto e vírgula no final de cada instrução
-        'semi': ['error', 'always'],
+        // 'semi': ['error', 'always'],
         // Proibir o uso de 'var'
         'no-var': 'error',
         // Proibir eval()
@@ -42,6 +42,6 @@ module.exports = {
         // Convenção de nomenclatura para constantes
         'camelcase': ['error', { 'properties': 'always' }],
         // Uso consistente de ponto e vírgula em propriedades de objeto
-        'object-curly-spacing': ['error', 'always']
+        // 'object-curly-spacing': ['error', 'always']
     }
 };
