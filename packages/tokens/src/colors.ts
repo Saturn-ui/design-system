@@ -18,7 +18,7 @@ export const colors = {
     complementBlue100: '#DDEDEF',
     complementBlue200: '#BBDBDF',
     complementBlue300: '#98C9D0',
-    complementBlue400: '54A5B0',
+    complementBlue400: '#54A5B0',
     
     dark: '#003334',
     gray100: '#F2F4F5',
@@ -26,6 +26,6 @@ export const colors = {
     gray600: '#B3C2C3',
     gray900: '#80999A',
 
-    white: '#fffff',
+    white: '#FFFFFF',
     error: '#FD5757',
 }
