@@ -1,13 +1,26 @@
 {
-    "private": true,
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "dev": "turbo run dev --parallel",
-        "build": "turbo run build"
-    },
-    "devDependencies": {
-        "turbo": "^1.12.3"
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "turbo": "^1.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Saturn-ui/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }
