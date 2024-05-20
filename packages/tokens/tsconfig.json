@@ -1,0 +1,4 @@
+{
+  "extends": "@saturn/tsconfig/base.json",
+  "include": ["src"]
+}

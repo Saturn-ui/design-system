@@ -1,0 +1,8 @@
+{
+  "name": "@saturn/eslint",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^9.3.0"
+  }
+}
