@@ -1,4 +1,5 @@
-import { styled } from "./styles";
+import { styled } from "../styles";
+import { ComponentProps } from "react";
 
 export const Button = styled("button", {
   backgroundColor: "$gray900",
