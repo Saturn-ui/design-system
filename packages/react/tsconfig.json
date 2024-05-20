@@ -1,4 +1,0 @@
-{
-  "extends": "@saturn/tsconfig/react.json",
-  "include": ["src"]
-}

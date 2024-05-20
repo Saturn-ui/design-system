@@ -1,5 +1,5 @@
 {
-  "name": "@saturn/tokens",
+  "name": "@saturn/pack-tokens",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,8 +14,8 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@saturn/tsconfig": "*",
-    "@saturn/eslint": "*",
+    "@saturn/pack-tsconfig": "*",
+    "@saturn/pack-eslint": "*",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
