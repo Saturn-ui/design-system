@@ -152,3 +152,6 @@ dist
 # dist ignore
 **/*.dist
 **/dist/
+
+# Turbo ignore
+.turbo
