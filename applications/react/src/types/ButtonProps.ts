@@ -1,4 +1,6 @@
-import { ComponentProps } from "react";
+import { ComponentProps, ElementType } from "react";
 import { Button } from "../components/Button";
 
-export type ButtonProps = ComponentProps<typeof Button>;
+export interface ButtonProps extends ComponentProps<typeof Button> {
+  as?: ElementType;
+}
