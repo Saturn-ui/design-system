@@ -17,3 +17,5 @@ export * from "./types/TextInputProps";
 export * from "./types/TextAreaProps";
 export * from "./types/CheckboxProps";
 export * from "./types/MultiStepProps";
+
+export * from "./styles";
