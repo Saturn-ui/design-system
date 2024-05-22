@@ -20,6 +20,9 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          TURBO_TOKEN: rCjwqI7PTCN8Pee9VdGtcIUX
+          TURBO_TEAM: kevindiks-projects
 
       - name: Deploy storybook-react
         working-directory: ./documentations/react

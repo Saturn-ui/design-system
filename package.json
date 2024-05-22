@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "1.0.0",
   "workspaces": [
     "applications/*",
     "documentations/*",
@@ -7,9 +8,13 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter@saturn/documentations/react && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.3",
     "turbo": "^1.13.3"
   }
 }
