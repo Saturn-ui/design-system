@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Box, Text, TextInput, TextInputProps } from "@saturn/app-react";
+import { Box, Text, Input, InputProps } from "@saturn/app-react";
 
 export default {
   title: "Form/Text Input",
-  component: TextInput,
+  component: Input,
   args: {},
   decorators: [
     (Story) => {
@@ -18,21 +18,21 @@ export default {
       );
     },
   ],
-} as Meta<TextInputProps>;
+} as Meta<InputProps>;
 
-export const Primary: StoryObj<TextInputProps> = {
+export const Primary: StoryObj<InputProps> = {
   args: {
     placeholder: "Type your name",
   },
 };
 
-export const Disabled: StoryObj<TextInputProps> = {
+export const Disabled: StoryObj<InputProps> = {
   args: {
     disabled: true,
   },
 };
 
-export const WithPrefix: StoryObj<TextInputProps> = {
+export const WithPrefix: StoryObj<InputProps> = {
   args: {
     prefix: "cal.com/",
     placeholder: "username",

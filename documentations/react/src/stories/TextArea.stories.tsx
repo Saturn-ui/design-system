@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Box, Text, TextArea, TextAreaProps } from "@saturn/app-react";
+import { Box, Text, Textarea, TextareaProps } from "@saturn/app-react";
 
 export default {
   title: "Form/Text Area",
-  component: TextArea,
+  component: Textarea,
   args: {},
   decorators: [
     (Story) => {
@@ -18,15 +18,15 @@ export default {
       );
     },
   ],
-} as Meta<TextAreaProps>;
+} as Meta<TextareaProps>;
 
-export const Primary: StoryObj<TextAreaProps> = {
+export const Primary: StoryObj<TextareaProps> = {
   args: {
     placeholder: "Add any observations...",
   },
 };
 
-export const Disabled: StoryObj<TextAreaProps> = {
+export const Disabled: StoryObj<TextareaProps> = {
   args: {
     disabled: true,
   },
