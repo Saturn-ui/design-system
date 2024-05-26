@@ -4,6 +4,7 @@ import { Box, Text, Textarea, TextareaProps } from "@saturn/app-react";
 export default {
   title: "Form/Text Area",
   component: Textarea,
+  tags: ["autodocs"],
   args: {},
   decorators: [
     (Story) => {

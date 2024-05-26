@@ -4,6 +4,7 @@ import { StoryObj, Meta } from "@storybook/react";
 export default {
   title: "Typography/Text",
   component: Text,
+  tags: ["autodocs"],
   args: {
     size: "md",
     children: "Exemplo de texto",

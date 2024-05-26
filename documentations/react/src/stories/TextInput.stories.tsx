@@ -4,6 +4,7 @@ import { Box, Text, Input, InputProps } from "@saturn/app-react";
 export default {
   title: "Form/Text Input",
   component: Input,
+  tags: ["autodocs"],
   args: {},
   decorators: [
     (Story) => {

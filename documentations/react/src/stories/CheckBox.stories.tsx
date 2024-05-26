@@ -4,6 +4,7 @@ import { Box, Text, Checkbox, CheckboxProps } from "@saturn/app-react";
 export default {
   title: "Form/Checkbox",
   component: Checkbox,
+  tags: ["autodocs"],
   args: {},
   decorators: [
     (Story) => {

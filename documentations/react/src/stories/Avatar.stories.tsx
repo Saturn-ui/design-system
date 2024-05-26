@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 export default {
   title: "Data display/Avatar",
   component: Avatar,
+  tags: ["autodocs"],
   args: {
     src: "https://github.com/kevinDsousa.png",
     alt: "Kevin Sousa",
