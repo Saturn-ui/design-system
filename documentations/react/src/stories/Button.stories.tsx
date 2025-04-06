@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@saturn/app-react";
+import { Button } from "@saturn/app-react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { ArrowRight } from "phosphor-react";
 
@@ -9,6 +9,8 @@ export default {
     children: "Send",
     variant: "primary",
     size: "md",
+    color: "default",
+    radius: "default",
     disabled: false,
   },
   argTypes: {
@@ -24,6 +26,18 @@ export default {
         type: "inline-radio",
       },
     },
+    color: {
+      options: ["default", "primary", "secondary", "destructive", "accent"],
+      control: {
+        type: "select",
+      },
+    },
+    radius: {
+      options: ["default", "sm", "md", "lg", "full"],
+      control: {
+        type: "select",
+      },
+    },
     disabled: {
       control: {
         type: "boolean",
@@ -31,42 +45,49 @@ export default {
     },
     onClick: { action: "clicked" },
   },
-} as Meta<ButtonProps>;
+} as Meta<typeof Button>;
 
-export const Primary: StoryObj<ButtonProps> = {};
+export const Default: StoryObj<typeof Button> = {};
 
-export const Secondary: StoryObj<ButtonProps> = {
+export const Secondary: StoryObj<typeof Button> = {
   args: {
     variant: "secondary",
     children: "Create new",
   },
 };
 
-export const Tertiary: StoryObj<ButtonProps> = {
+export const Tertiary: StoryObj<typeof Button> = {
   args: {
     variant: "tertiary",
     children: "Cancel",
   },
 };
 
-export const Small: StoryObj<ButtonProps> = {
+export const Small: StoryObj<typeof Button> = {
   args: {
     size: "sm",
   },
 };
 
-export const WithIcon: StoryObj<ButtonProps> = {
+export const WithIcon: StoryObj<typeof Button> = {
   args: {
     children: (
       <>
-        Próximo passo
+        Next Step
         <ArrowRight weight="bold" />
       </>
     ),
   },
 };
 
-export const Disabled: StoryObj<ButtonProps> = {
+export const CustomColor: StoryObj<typeof Button> = {
+  args: {
+    color: "primary",
+    children: "Primary Color",
+  },
+};
+
+export const Disabled: StoryObj<typeof Button> = {
   args: {
     disabled: true,
   },

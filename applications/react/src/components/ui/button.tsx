@@ -3,6 +3,10 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+import { colors } from "../../../../../packages/tokens/src/colors"
+import { space } from "../../../../../packages/tokens/src/space"
+import { fontSizes } from "../../../../../packages/tokens/src/font-sizes"
+import { radii } from "../../../../../packages/tokens/src/radii"
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
@@ -38,19 +42,36 @@ const buttonVariants = cva(
 function Button({
   className,
   variant,
-  size,
+  size = "default",
+  color = "default",
+  font = "default",
+  radius = "default",
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    size?: keyof typeof space
+    color?: keyof typeof colors
+    font?: keyof typeof fontSizes
+    radius?: keyof typeof radii 
   }) {
   const Comp = asChild ? Slot : "button"
+  const sizeValue = space[size]
+  const colorValue = colors[color]
+  const fontValue = fontSizes[font]
+  const radiusValue = radii[radius]
 
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(
+        buttonVariants({ variant, className }),
+        sizeValue ? `px-[${sizeValue}] py-[${sizeValue}]` : "",
+        colorValue ? `bg-[${colorValue}] text-[${colorValue}-foreground]` : "",
+        fontValue ? `text-[${fontValue}]` : "",
+        radiusValue ? `rounded-[${radiusValue}]` : ""
+      )}
       {...props}
     />
   )

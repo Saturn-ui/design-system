@@ -12,4 +12,5 @@ export const fontSizes = {
   "7xl": "4rem",
   "8xl": "4.5rem",
   "9xl": "6rem",
+  default: "1rem",
 };
